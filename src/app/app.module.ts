@@ -4,6 +4,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { RouterModule  } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { PlayListResolve } from "./routing/play-list-resolve";
 
 import "./rxjs-extensions";
 
@@ -20,7 +21,7 @@ const declarables = [
 ];
 
 const providers = [
-
+    PlayListResolve
 ];
 
 @NgModule({
