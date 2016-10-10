@@ -87,14 +87,18 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\pages\landing-page.component.html">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\landing-page.component.scss">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\videos\01-egghead.mp4" />
     <Content Include="src\videos\02-egghead.mp4" />
     <Content Include="webpack.config.js" />
     <Content Include="tsconfig.json" />
     <Content Include="typedoc.json" />
     <Content Include="typings.json" />
-    <Content Include="src\app\pages\home-page.component.scss" />
-    <Content Include="src\app\pages\home-page.component.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -150,10 +154,14 @@
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
-    <TypeScriptCompile Include="src\app\pages\home-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
+    <TypeScriptCompile Include="src\app\pages\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\models\index.ts" />
+    <TypeScriptCompile Include="src\app\models\video.model.ts" />
+    <TypeScriptCompile Include="src\app\models\play-list.model.ts" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
