@@ -6,7 +6,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{DEE5F4F4-8D6A-4B18-925D-2A8712838DE6}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -21,7 +22,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -91,8 +93,6 @@
     <Content Include="src\app\pages\landing-page.component.scss">
       <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\videos\01-egghead.mp4" />
-    <Content Include="src\videos\02-egghead.mp4" />
     <Content Include="webpack.config.js" />
     <Content Include="tsconfig.json" />
     <Content Include="typedoc.json" />
@@ -122,7 +122,8 @@
           <IISUrl>http://localhost:63359/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl></CustomServerUrl>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -144,6 +145,7 @@
   -->
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\routing\play-list-resolve.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\main.ts" />
@@ -159,6 +161,8 @@
     <TypeScriptCompile Include="src\app\models\play-list.model.ts" />
     <TypeScriptCompile Include="src\app\models\play-list-factory.model.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\videos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

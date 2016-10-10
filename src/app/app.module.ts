@@ -4,7 +4,6 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { RouterModule  } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { PlayListResolve } from "./routing/play-list-resolve";
 
 import "./rxjs-extensions";
 
@@ -12,7 +11,8 @@ import { AppComponent } from './app.component';
 
 import {
     RoutingModule,
-    routedComponents
+    routedComponents,
+    routingProviders
 } from "./routing";
 
 const declarables = [
@@ -20,9 +20,7 @@ const declarables = [
     ...routedComponents
 ];
 
-const providers = [
-    PlayListResolve
-];
+const providers = [];
 
 @NgModule({
     imports: [
@@ -33,7 +31,7 @@ const providers = [
         FormsModule,
         RouterModule
     ],
-    providers: providers,
+    providers: [routingProviders,providers],
     declarations: [declarables],
     exports: [declarables],
     bootstrap: [AppComponent]

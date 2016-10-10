@@ -1,3 +1,5 @@
+
+import { ModuleWithProviders } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { PlayListResolve } from "./play-list-resolve";
 
@@ -23,3 +25,6 @@ export const routedComponents = [
     LandingPageComponent
 ];
 
+export const routingProviders = [
+    PlayListResolve
+];

@@ -14,7 +14,6 @@ export class LandingPageComponent implements AfterViewInit, OnInit {
         private _elementRef: ElementRef) {}
 
     ngOnInit() {
-        this._playList = this._activatedRoute.snapshot.data['playList'];
         this.defaultVideo = this._playList.getDefault();  
     }
 
@@ -23,9 +22,8 @@ export class LandingPageComponent implements AfterViewInit, OnInit {
             this.videoPlayer.src = this._playList.getNext().src;            
         }
     }
-
-    public currentIndex: number = 0;
+        
     public defaultVideo: { src: string };
-    public _playList: PlayList;
+    public get _playList(): PlayList { return this._activatedRoute.snapshot.data['playList']; }
     public get videoPlayer() { return this._elementRef.nativeElement.querySelector("video"); }
 }
